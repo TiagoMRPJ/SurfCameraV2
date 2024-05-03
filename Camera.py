@@ -44,9 +44,7 @@ class Cam():
 		self.capture_thread = None
 		self.nr = nr
 		self.capture_thread = threading.Thread(target=self.worker)
-		self.focus_thread = threading.Thread(target=Focus.main())
 		self.capture_thread.start()
-		self.focus_thread.start()
 
 	def stop(self): 
 		self.run = False		
@@ -108,7 +106,6 @@ class Cam():
 				prim = time.time()
 				frame = cv2.imencode('.jpg', img)[1].tobytes() 
 				self.camera_state.image = (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-				print(time.time()-prim)
 		self.capture.release()
 		self.running = False
 
