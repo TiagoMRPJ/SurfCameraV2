@@ -6,7 +6,7 @@ import db
 
 class Cam():
 
-	def __init__(self, q_frame = None, cam_width=640, cam_height=480, cam_fps=30, preview=True):
+	def __init__(self, q_frame = None, cam_width=640, cam_height=480, cam_fps=30):
 		self.running = False
 		self.focus_val = 0   
 		self.is_recording = False	  
@@ -16,7 +16,6 @@ class Cam():
 		self.cam_width = cam_width
 		self.cam_height = cam_height
 		self.cam_fps = cam_fps
-		self.preview = preview
 		self.focus_traker_enabled = False
 		self.roi_size = 150
 		self.roi_x0 = int(cam_width / 2 - self.roi_size)
@@ -27,9 +26,7 @@ class Cam():
 		self.video_file = ''
 		conn = db.get_connection()
 		self.camera_state = db.CameraState(conn)
-
-	def set_cam_text(self, text):
-		self.cam_text = text
+		self.commands = db.Commands(conn)
 
 	def eval_focus(self, img):
 		# get ROI and calculate Laplacian transformation
@@ -45,11 +42,15 @@ class Cam():
 		self.nr = nr
 		self.capture_thread = threading.Thread(target=self.worker)
 		self.capture_thread.start()
+		self.FocusZoomController = Focus.ZoomFocus()
+		self.focus_zoom_thread = threading.Thread(target=self.FocusZoomController.worker)
+		self.focus_zoom_thread.start()
 
 	def stop(self): 
 		self.run = False		
 		try:
 			self.capture_thread.join()
+			self.focus_zoom_thread.join()
 		except:
 			pass
 		
@@ -80,28 +81,29 @@ class Cam():
 			end = time.time()
 			new_frame, img = self.capture.read()
 			if self.camera_state.start_recording and not self.is_recording:
-					self.is_recording = True
-					print("Start recording with timeStamp {}".format(time.time()))
-					self.video_file = cv2.VideoWriter(str(int(time.time()))+'.avi', 0, cv2.VideoWriter_fourcc(*'MJPG'), 30, (640,480))
+				self.is_recording = True
+				print("Start recording with timeStamp {}".format(time.time()))
+				self.video_file = cv2.VideoWriter(str(int(time.time()))+'.avi', 0, cv2.VideoWriter_fourcc(*'MJPG'), 30, (640,480))
 			if self.is_recording and not self.camera_state.start_recording:
-					self.is_recording = False
-					self.video_file.release()
-					print("Stop recording session")
+				self.is_recording = False
+				self.video_file.release()
+				print("Stop recording session")
 			
 			if self.is_recording and new_frame:
-					#print("Record new frame")
-					self.video_file.write(img)
+				#print("Record new frame")
+				self.video_file.write(img)
 
 			elapsed = end-start
 			if elapsed > 0:
-					self.fps = 1 / (elapsed)
+				self.fps = 1 / (elapsed)
 			else:
-					self.fps = 0
-			start = end			
-			if self.focus_traker_enabled:
-					self.focus_val, _ = self.eval_focus(img)
-					self.camera_state.image_focus = self.focus_val
-			#if new_frame:
+				self.fps = 0
+			start = end
+   		
+			if self.camera_state.focus_tracker:
+				self.focus_val, _ = self.eval_focus(img)
+				self.camera_state.image_focus = self.focus_val
+     
 			if not self.is_recording:
 				prim = time.time()
 				frame = cv2.imencode('.jpg', img)[1].tobytes() 
@@ -110,7 +112,7 @@ class Cam():
 		self.running = False
 
 
-if __name__ == "__main__":
+def main(d):
 	c = Cam()
 
 	print("Starting cam")

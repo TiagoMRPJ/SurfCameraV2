@@ -93,6 +93,7 @@ class Commands:
         self.client.set_initial("camera_calibrate_heading", False)   # Flag utilized to start the heading calibration process
         self.client.set_initial("camera_autofocus", False)           # Flag utilized to auto focus the camera
         self.client.set_initial("camera_zoom_value", 50)             # Zoom value to apply between 0 and 100
+        self.client.set_initial("camera_apply_zoom_value", False)
         
     @property
     def camera_calibrate_origin(self):
@@ -110,11 +111,36 @@ class Commands:
     def camera_calibrate_heading(self, value):
         self.client.set("camera_calibrate_heading", value)
         
+    @property
+    def camera_autofocus(self):
+        return self.client.get("camera_autofocus")
+
+    @camera_autofocus.setter
+    def camera_autofocus(self, value):
+        self.client.set("camera_autofocus", value)
+        
+    @property
+    def camera_zoom_value(self):
+        return self.client.get("camera_zoom_value")
+
+    @camera_zoom_value.setter
+    def camera_zoom_value(self, value):
+        self.client.set("camera_zoom_value", value)
+        
+    @property
+    def camera_apply_zoom_value(self):
+        return self.client.get("camera_apply_zoom_value")
+
+    @camera_apply_zoom_value.setter
+    def camera_apply_zoom_value(self, value):
+        self.client.set("camera_apply_zoom_value", value)
+        
         
 class CameraState:
     def __init__(self, connection):
         self.client = RedisClient(connection)
         self.client.set_initial("is_recording", False)
+        self.client.set_initial("focus_tracker", False)
 
     @property
     def image(self):
@@ -131,6 +157,14 @@ class CameraState:
     @start_recording.setter
     def start_recording(self, v):
         self.client.set("start_recording", v)
+        
+    @property
+    def focus_tracker(self):
+        return self.client.get("focus_tracker")
+
+    @focus_tracker.setter
+    def focus_tracker(self, v):
+        self.client.set("focus_tracker", v)
 
     @property
     def image_focus(self):

@@ -90,8 +90,17 @@ class PanTiltController:
             time = 0.1
         self.tiltServo.control_angle(servo_rotation, time)
         
+'''      
+def main(d):
+    s = PanTiltController()
+    while True:
+        time.sleep(0.05)
+'''
+     
+        
 if __name__ == "__main__":
     s = PanTiltController()
+    start = time.time()
     s.setTiltServoAngle(angle = 0)
-    time.sleep(2)
+    print(time.time()-start)
     
