@@ -5,6 +5,7 @@ Herkulex DRS 0201 Servo Drivers
 import pyherkulex as hx
 import time
 from GPIO import MyGPIO
+import serial
 
 class PanTiltController:
     def __init__(self):
@@ -12,7 +13,7 @@ class PanTiltController:
         IO = MyGPIO()
         IO.SetHerkulexEnable(False) # False IS ON
         
-        self.serial = hx.serial()
+        self.serial = serial.Serial('/dev/ttyS0', baudrate = 115200)
         broadcast_srv = hx.Servo(serial = self.serial)
         broadcast_srv.led = hx.LED_WHITE
         

@@ -16,9 +16,9 @@ PERSISTENT_FILENAME = "db.txt"
 
 PROCESSES = [
     Camera,
-    #RadioGps,
-    TrackingControl
-   # WebServer,
+    RadioGps,
+    TrackingControl,
+    WebServer
 ]
 
 if __name__ == '__main__':

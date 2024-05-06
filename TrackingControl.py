@@ -108,5 +108,5 @@ def main(d):
                 panAngle = panCalculations()
                 tiltAngle = tiltCalculations()
                 PTController.setPanServoAngle(panAngle)
-                PTController.setTiltServoAngle(tiltAngle)
+                PTController.setTiltServoAngle(tiltAngle + gps_points.tilt_offset)
                 

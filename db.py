@@ -55,6 +55,8 @@ class GPSData:
         self.client.set_initial("reads_per_second", 0)                                       # Variable to store how many readings per second we're taking from the radio
         self.client.set_initial("gps_fix", False)                                            # Flag to indicate th
         self.client.set_initial("new_reading", False)                 # Flag to indicate a new reading has come in
+        self.client.set_initial("tilt_offset", 0 )                      # Used to manually fine adjust tilt calibration
+        
         
     @property
     def camera_origin(self):
@@ -103,6 +105,15 @@ class GPSData:
     @new_reading.setter
     def new_reading(self, value):
         self.client.set("new_reading", value)
+        
+    @property
+    def tilt_offset(self):
+        return self.client.get("tilt_offset")
+
+    @tilt_offset.setter
+    def tilt_offset(self, value):
+        self.client.set("tilt_offset", value)
+        
 
 class Commands:
     def  __init__(self, connection):
