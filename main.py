@@ -1,4 +1,8 @@
 import Camera
+import RadioGps
+import TrackingControl
+import WebServer
+
 
 from multiprocessing import Process, Manager
 import time
@@ -11,7 +15,10 @@ client = RedisClient(r)
 PERSISTENT_FILENAME = "db.txt"
 
 PROCESSES = [
-    Camera
+    Camera,
+    #RadioGps,
+    TrackingControl
+   # WebServer,
 ]
 
 if __name__ == '__main__':

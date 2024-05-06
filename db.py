@@ -48,11 +48,13 @@ class RedisClient:
 class GPSData:
     def  __init__(self, connection):
         self.client = RedisClient(connection)
-        self.client.set_initial("camera_origin", { "latitude": 0, "longitude": 0 })          # Coordinates of the camera's location -> Calibrate to change this
-        self.client.set_initial("camera_heading_coords", { "latitude": 0, "longitude": 0})   # Coordinates of camera's 0º heading -> Calibrate to change this
+        #self.client.set_initial("camera_origin", { "latitude": 0, "longitude": 0 })          # Coordinates of the camera's location -> Calibrate to change this
+        #self.client.set_initial("camera_heading_coords", { "latitude": 0, "longitude": 0})   # Coordinates of camera's 0º heading -> Calibrate to change this
+        #self.client.set_initial("camera_heading_angle", 0)
         self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
-
+        self.client.set_initial("reads_per_second", 0)                                       # Variable to store how many readings per second we're taking from the radio
         self.client.set_initial("gps_fix", False)                                            # Flag to indicate th
+        self.client.set_initial("new_reading", False)                 # Flag to indicate a new reading has come in
         
     @property
     def camera_origin(self):
@@ -63,12 +65,20 @@ class GPSData:
         self.client.set("camera_origin", value)
         
     @property
-    def camera_heading(self):
-        return self.client.get("camera_heading")
+    def camera_heading_coords(self):
+        return self.client.get("camera_heading_coords")
 
-    @camera_heading.setter
-    def camera_heading(self, value):
-        self.client.set("camera_heading", value)
+    @camera_heading_coords.setter
+    def camera_heading_coords(self, value):
+        self.client.set("camera_heading_coords", value)
+        
+    @property
+    def camera_heading_angle(self):
+        return self.client.get("camera_heading_angle")
+
+    @camera_heading_angle.setter
+    def camera_heading_angle(self, value):
+        self.client.set("camera_heading_angle", value)
         
     @property
     def latest_gps_data(self):
@@ -85,6 +95,14 @@ class GPSData:
     @gps_fix.setter
     def gps_fix(self, value):
         self.client.set("gps_fix", value)
+        
+    @property
+    def new_reading(self):
+        return self.client.get("new_reading")
+
+    @new_reading.setter
+    def new_reading(self, value):
+        self.client.set("new_reading", value)
 
 class Commands:
     def  __init__(self, connection):
@@ -94,6 +112,7 @@ class Commands:
         self.client.set_initial("camera_autofocus", False)           # Flag utilized to auto focus the camera
         self.client.set_initial("camera_zoom_value", 50)             # Zoom value to apply between 0 and 100
         self.client.set_initial("camera_apply_zoom_value", False)
+        self.client.set_initial("tracking_enabled", False)            # Flag utilized to toggle tracking
         
     @property
     def camera_calibrate_origin(self):
@@ -135,12 +154,28 @@ class Commands:
     def camera_apply_zoom_value(self, value):
         self.client.set("camera_apply_zoom_value", value)
         
+    @property
+    def tracking_enabled(self):
+        return self.client.get("tracking_enabled")
+
+    @tracking_enabled.setter
+    def tracking_enabled(self, value):
+        self.client.set("tracking_enabled", value)
+            
         
 class CameraState:
     def __init__(self, connection):
         self.client = RedisClient(connection)
         self.client.set_initial("is_recording", False)
         self.client.set_initial("focus_tracker", False)
+
+    @property
+    def is_recording(self):
+        return self.client.get("is_recording")
+
+    @is_recording.setter
+    def is_recording(self, v):
+        self.client.set("is_recording", v)
 
     @property
     def image(self):
