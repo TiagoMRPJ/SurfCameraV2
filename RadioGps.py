@@ -66,7 +66,7 @@ def receive():
 def decode(line):
 	global receiveTime, lastReceiveTime, interval, newRead
 	global lastLat, lastLon, lastAlt, distance
-	print(line)
+	#print(line)
 	if len(line.split(',')) == 2:
 		data = line.split(',')
 		lat = float(data[0]) / 10000000
@@ -74,7 +74,7 @@ def decode(line):
 		if int(lat) == 38 and int(lon) == -9: 
 			lastLat = lat
 			lastLon = lon
-		print("new read",lastLat, lastLon)
+		#print("new read",lastLat, lastLon)
 		newRead = True
 	else:
 		print('ERROR: ',line)
@@ -99,31 +99,37 @@ def main(d):
 	rec_Thread = threading.Thread(target=Rx_thread)
 	rec_Thread.start()
 	
-	while True:
-		time.sleep(0.01)
-		if newRead:
-			position = {"latitude": float(lastLat), "longitude": float(lastLon)}
-			gps_points.latest_gps_data = position
-	
-			# Time between readings calculations
-			success += 1
-			curT = time.time()
-			elapT = curT - start_time
-			
-			if elapT >= 5:
-				readsPerSec = success/elapT
-				print('Reads per second: ',readsPerSec)
-				success = 0
-				start_time = time.time()
-				if readsPerSec >= 4:
-					io.SetSecondLED(True)
-				else:
-					io.SetSecondLED(False)
-     
-			gps_points.new_reading = True
-			newRead = False
-			if camera_state.is_recording:
-				with open('gps_data.txt', 'a+') as f:
-					f.write('{:.6f},{:.6f},{}\n'.format(lastLat, -lastLon, 'saved'))
+	try:
+		while True:
+			time.sleep(0.01)
+			if newRead:
+				position = {"latitude": float(lastLat), "longitude": float(lastLon)}
+				gps_points.latest_gps_data = position
+		
+				# Time between readings calculations
+				success += 1
+				curT = time.time()
+				elapT = curT - start_time
+				
+				if elapT >= 5:
+					readsPerSec = success/elapT
+					#print('Reads per second: ',readsPerSec)
+					success = 0
+					start_time = time.time()
+					if readsPerSec >= 4:
+						io.SetSecondLED(True)
+					else:
+						io.SetSecondLED(False)
+		
+				gps_points.new_reading = True
+				newRead = False
+				if camera_state.is_recording:
+					with open('gps_data.txt', 'a+') as f:
+						f.write('{:.6f},{:.6f},{}\n'.format(lastLat, -lastLon, 'saved'))
+	except KeyboardInterrupt:
+		pass
+		
 
+if __name__ == "__main__":
+    main({"stop": False})
     

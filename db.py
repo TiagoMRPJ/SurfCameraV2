@@ -56,7 +56,7 @@ class GPSData:
         self.client.set_initial("gps_fix", False)                                            # Flag to indicate th
         self.client.set_initial("new_reading", False)                 # Flag to indicate a new reading has come in
         self.client.set_initial("tilt_offset", 0 )                      # Used to manually fine adjust tilt calibration
-        
+        self.client.set_initial("camera_vertical_distance", 3.5)        # Variable to store the fixed value of the camera vertical position 
         
     @property
     def camera_origin(self):
@@ -114,6 +114,14 @@ class GPSData:
     def tilt_offset(self, value):
         self.client.set("tilt_offset", value)
         
+    @property
+    def camera_vertical_distance(self):
+        return self.client.get("camera_vertical_distance")
+
+    @camera_vertical_distance.setter
+    def camera_vertical_distance(self, value):
+        self.client.set("camera_vertical_distance", value)
+        
 
 class Commands:
     def  __init__(self, connection):
@@ -124,6 +132,8 @@ class Commands:
         self.client.set_initial("camera_zoom_value", 50)             # Zoom value to apply between 0 and 100
         self.client.set_initial("camera_apply_zoom_value", False)
         self.client.set_initial("tracking_enabled", False)            # Flag utilized to toggle tracking
+        self.client.set_initial("livestream_enabled", False)
+        
         
     @property
     def camera_calibrate_origin(self):
@@ -172,11 +182,20 @@ class Commands:
     @tracking_enabled.setter
     def tracking_enabled(self, value):
         self.client.set("tracking_enabled", value)
+        
+    @property
+    def livestream_enabled(self):
+        return self.client.get("livestream_enabled")
+
+    @livestream_enabled.setter
+    def livestream_enabled(self, value):
+        self.client.set("livestream_enabled", value)
             
         
 class CameraState:
     def __init__(self, connection):
         self.client = RedisClient(connection)
+        self.client.set_initial("start_recording", False)
         self.client.set_initial("is_recording", False)
         self.client.set_initial("focus_tracker", False)
 

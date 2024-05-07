@@ -33,6 +33,21 @@ def main(d):
         camera_state.start_recording = False
         return jsonify({ "success": camera_state.start_recording, "message": "OK" })
 
+    @app.route('/start_tracking', methods=["POST"])
+    def start_tracking():
+        """Start Tracking"""
+        print("Flask Start Tracking")
+        commands.tracking_enabled = True
+        return jsonify({ "success": True, "message": "OK" })
+
+    @app.route('/stop_tracking', methods=["POST"])
+    def stop_tracking():
+        """Put camera in idle mode."""
+        print("Flask StopTracking")
+        commands.tracking_enabled = False
+        return jsonify({ "success": True, "message": "OK" })
+
+
     @app.route('/set_autofocus', methods=["POST"])
     def set_autofocus():
         commands.camera_autofocus = True
@@ -66,3 +81,51 @@ def main(d):
     def tilt_offset_minus():
         gps_points.tilt_offset -= 1
         return jsonify({"success": True, "message": "Values Updated!"})
+    
+
+    @app.route('/calibrate_position', methods=["POST"])
+    def calibrate_position():
+        """Triggers the calibration method for the camera origin"""
+        print("flask calibrate_position")
+        commands.camera_calibrate_origin = True
+        return jsonify({ "success": True, "message": "OK" })
+
+    @app.route('/calibrate_heading', methods=["POST"])
+    def calibrate_heading():
+        """Triggers the calibration method for the camera heading"""
+        print("flask calibrate_heading")
+        commands.camera_calibrate_heading = True
+        return jsonify({ "success": True, "message": "OK" })
+    
+    def gen():
+        """Video streaming generator function."""
+        while True:
+            yield camera_state.image
+            time.sleep(0.15)
+
+    @app.route('/video_feed')
+    def video_feed():
+        """Video streaming route. Put this in the src attribute of an img tag."""
+        return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    
+    @app.route('/shutdown_surf')
+    def shutdown_surf():
+        """Route to shutdown system"""
+        from subprocess import call
+        call("sudo shutdown -h now", shell=True)
+        return jsonify({ "success": True, "message": "OK" })
+    
+    def start_server():
+        print("starting server")
+        app.run(host="0.0.0.0", port="5000", threaded=True)
+
+    from multiprocessing import Process
+    p_server = Process(target=start_server)
+    p_server.start()
+    try:
+        while not d["stop"]:
+            time.sleep(0.1)
+    except KeyboardInterrupt:
+        pass
+    p_server.terminate()
+    p_server.join()

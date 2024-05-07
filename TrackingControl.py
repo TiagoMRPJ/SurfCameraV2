@@ -76,7 +76,7 @@ def panCalculations():
 def tiltCalculations():
     trackDistX = 1000 * gpsDistance(gps_points.camera_origin['latitude'], gps_points.camera_origin['longitude'],
                                     gps_points.latest_gps_data['latitude'], gps_points.latest_gps_data['longitude'])
-    trackDistY = 3.5 # Or whatever the vertical distance is that day
+    trackDistY = gps_points.camera_vertical_distance
     tiltAngle = np.degrees(math.atan2(trackDistX, trackDistY)) - 90
     tiltAngle = round(tiltAngle, 1) # Round to 1 decimal place
     return tiltAngle
@@ -88,12 +88,13 @@ def main(d):
         time.sleep(0.01)
         
         if commands.camera_calibrate_origin:        # Calibrate the camera origin coordinate
+            commands.camera_calibrate_origin = False
             avg_lat, avg_lon = calibrationCoordsCal()
             gps_points.camera_origin['latitude'] = avg_lat
             gps_points.camera_origin['longitude'] = avg_lon
             
-            
-        if commands.camera_calibrate_heading:       # Calibrate the camera heading coordinate
+        elif commands.camera_calibrate_heading:       # Calibrate the camera heading coordinate
+            commands.camera_calibrate_heading = False
             avg_lat, avg_lon = calibrationCoordsCal()
             gps_points.camera_heading_coords['latitude'] = avg_lat
             gps_points.camera_heading_coords['longitude'] = avg_lon
@@ -104,9 +105,11 @@ def main(d):
         if commands.tracking_enabled:
             if gps_points.new_reading:
                 gps_points.new_reading = False
-                
                 panAngle = panCalculations()
                 tiltAngle = tiltCalculations()
                 PTController.setPanServoAngle(panAngle)
                 PTController.setTiltServoAngle(tiltAngle + gps_points.tilt_offset)
+        else:
+            PTController.setPanServoAngle(0)
+            PTController.setTiltServoAngle(10)
                 

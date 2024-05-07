@@ -3,6 +3,7 @@ import cv2
 import time
 import Focus
 import db
+import numpy as np
 
 class Cam():
 
@@ -27,6 +28,7 @@ class Cam():
 		conn = db.get_connection()
 		self.camera_state = db.CameraState(conn)
 		self.commands = db.Commands(conn)
+		self.camera_state.start_recording = False
 
 	def eval_focus(self, img):
 		# get ROI and calculate Laplacian transformation
@@ -84,14 +86,18 @@ class Cam():
 				self.is_recording = True
 				print("Start recording with timeStamp {}".format(time.time()))
 				self.video_file = cv2.VideoWriter(str(int(time.time()))+'.avi', 0, cv2.VideoWriter_fourcc(*'MJPG'), 30, (640,480))
+				self.imgbuffer = []
 			if self.is_recording and not self.camera_state.start_recording:
 				self.is_recording = False
+				for f in self.imgbuffer:
+					self.video_file.write(f)
 				self.video_file.release()
-				print("Stop recording session")
+				print("Recording Session Finished")
 			
 			if self.is_recording and new_frame:
-				#print("Record new frame")
-				self.video_file.write(img)
+				self.imgbuffer.append(img)
+    			#self.imgbuffer = np.append(self.imgbuffer,  img, axis=None)
+				#self.video_file.write(img)
 
 			elapsed = end-start
 			if elapsed > 0:
@@ -105,12 +111,11 @@ class Cam():
 				self.camera_state.image_focus = self.focus_val
      
 			if not self.is_recording:
-				prim = time.time()
 				frame = cv2.imencode('.jpg', img)[1].tobytes() 
 				self.camera_state.image = (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-		self.capture.release()
+		
+  		self.capture.release()
 		self.running = False
-
 
 def main(d):
 	c = Cam()
