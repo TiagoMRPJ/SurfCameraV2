@@ -1,2 +1,2 @@
 # SurfCameraV2
-Revamped version of the software controlling the pan/tilt/zoom unit.
+Redesigned software for the First Prototype Camera Unit.
