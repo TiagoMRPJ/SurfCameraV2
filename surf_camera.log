@@ -1,0 +1,2999 @@
+Attempt 1 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1162, in _init_ack_policy
+    self._ack_policy = self._ram_read_single(RAM_ACK_POLICY)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x01
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 19, in __init__
+    self.panServo = hx.Servo(1)
+                    ^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 727, in __init__
+    self._init_ack_policy()
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1167, in _init_ack_policy
+    self._ram_read_single(RAM_ACK_POLICY)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x01
+Attempt 2 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 2
+Attempt 1 to start main.py script
+starting server
+ * Serving Flask app 'WebServer'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.119:5000
+Press CTRL+C to quit
+192.168.2.32 - - [06/Jun/2024 14:51:26] "GET / HTTP/1.1" 200 -
+192.168.2.32 - - [06/Jun/2024 14:51:26] "GET /video_feed HTTP/1.1" 200 -
+Attempt 1 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1162, in _init_ack_policy
+    self._ack_policy = self._ram_read_single(RAM_ACK_POLICY)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x01
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 19, in __init__
+    self.panServo = hx.Servo(1)
+                    ^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 727, in __init__
+    self._init_ack_policy()
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1167, in _init_ack_policy
+    self._ram_read_single(RAM_ACK_POLICY)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x01
+Attempt 2 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 2
+Attempt 1 to start main.py script
+starting server
+ * Serving Flask app 'WebServer'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.119:5000
+Press CTRL+C to quit
+192.168.2.32 - - [06/Jun/2024 14:57:03] "GET / HTTP/1.1" 200 -
+192.168.2.32 - - [06/Jun/2024 14:57:03] "GET /video_feed HTTP/1.1" 200 -
+Attempt 2 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 3 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 4 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 5 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 6 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 7 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 8 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 9 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 10 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 11 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 12 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 13 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 14 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+Attempt 15 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 29, in <module>
+    client.load(PERSISTENT_FILENAME)
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 41, in load
+    with open(filename) as fp:
+         ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'db.txt'
+All attempts to start main.py script failed
+Attempt 1 to run MotorTest.py
+Attempt 1 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 20, in __init__
+    self.tiltServo = hx.Servo(2)    
+                     ^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 757, in __init__
+    raise PyHerkuleX_Exception("Unknown model "+str(self._model)+".")
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Unknown model 6676.
+Attempt 2 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1162, in _init_ack_policy
+    self._ack_policy = self._ram_read_single(RAM_ACK_POLICY)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x02
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 20, in __init__
+    self.tiltServo = hx.Servo(2)    
+                     ^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 727, in __init__
+    self._init_ack_policy()
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1167, in _init_ack_policy
+    self._ram_read_single(RAM_ACK_POLICY)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x02
+Attempt 3 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1162, in _init_ack_policy
+    self._ack_policy = self._ram_read_single(RAM_ACK_POLICY)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x02
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 810, in _ram_read_single
+    return struct.unpack('1B',self.serial.read(12)[9:10])[0]
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 20, in __init__
+    self.tiltServo = hx.Servo(2)    
+                     ^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 727, in __init__
+    self._init_ack_policy()
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1167, in _init_ack_policy
+    self._ram_read_single(RAM_ACK_POLICY)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 817, in _ram_read_single
+    raise PyHerkuleX_Exception("Could not communicate with servo ID: 0x%02X"%self._id)
+pyherkulex.pyherkulex.PyHerkuleX_Exception: Could not communicate with servo ID: 0x02
+Attempt 4 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 4
+Attempt 1 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 2 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 3 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 4 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 5 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 6 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 7 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 8 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 9 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 10 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 11 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 12 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 13 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 14 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 15 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+All attempts to start main.py script failed
+Attempt 1 to run MotorTest.py
+Attempt 2 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 2
+Attempt 1 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 2 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 3 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 4 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 5 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 6 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 7 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 8 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 9 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 10 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 11 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 12 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 13 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 14 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 15 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+All attempts to start main.py script failed
+Attempt 1 to run MotorTest.py
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 29, in <module>
+    main()
+  File "/home/surfcamera/Documents/SurfCameraV2/MotorTest.py", line 12, in main
+    ptcontroller = pt()
+                   ^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/PanTilt.py", line 22, in __init__
+    self.panServo.ack_policy = hx.ACK_ALL # This allows the Servos to reply to all types of requests
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 1196, in ack_policy
+    self._ram_write(RAM_ACK_POLICY, value)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 823, in _ram_write
+    self._write(REQ_RAM_WRITE, register, len(data), *data)
+  File "/home/surfcamera/Documents/SurfCameraV2/pyherkulex/pyherkulex.py", line 786, in _write
+    if struct.unpack('1B',self.serial.read(len0)[1:2])[0] != data[2]+0x40:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 1 bytes
+Attempt 2 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 2
+Attempt 1 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 2 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 3 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 4 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 5 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 6 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 7 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 8 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 9 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 10 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 11 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 12 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 13 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 14 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 15 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+All attempts to start main.py script failed
+Attempt 1 to run MotorTest.py
+Attempt 1 to run MotorTest.py
+Attempt 2 to run MotorTest.py
+Testing Tilt ....
+Testing Pan ....
+MotorTest.py succeeded on attempt 2
+Attempt 1 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 2 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 3 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 4 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 5 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 6 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 7 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 8 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 9 to start main.py script
+Attempt 10 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 11 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 12 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 13 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+Attempt 14 to start main.py script
+Attempt 15 to start main.py script
+Traceback (most recent call last):
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 264, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 265, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 627, in _connect
+    raise err
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 615, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/surfcamera/Documents/SurfCameraV2/main.py", line 5, in <module>
+    import TrackingControl
+  File "/home/surfcamera/Documents/SurfCameraV2/TrackingControl.py", line 13, in <module>
+    gps_points = db.GPSData(conn)
+                 ^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 54, in __init__
+    self.client.set_initial("latest_gps_data", { "latitude": 0, "longitude": 0})         # Latest coordinates received from the Tracker
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 21, in set_initial
+    if not self.get(key):
+           ^^^^^^^^^^^^^
+  File "/home/surfcamera/Documents/SurfCameraV2/db.py", line 26, in get
+    val = self.r.get(key)
+          ^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/home/surfcamera/.local/lib/python3.11/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+All attempts to start main.py script failed
+Attempt 1 to run MotorTest.py

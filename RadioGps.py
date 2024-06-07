@@ -23,6 +23,8 @@ receiveTime = 0
 lastReceiveTime = 0
 lastLat = 0
 lastLon = 0
+sats = 0
+rssi = 0
 distance = 0
 
 newRead = False
@@ -53,10 +55,9 @@ rl = ReadLine(ser)
 
 def receive():
 	if ser.in_waiting > 0:
-		#print("Serial Working")
 		try:
 			line = rl.readline().decode().rstrip()
-			if len(line.split(',')) != 2:
+			if len(line.split(',')) != 4:
 				pass
 			else:
 				decode(line)
@@ -65,16 +66,16 @@ def receive():
    
 def decode(line):
 	global receiveTime, lastReceiveTime, interval, newRead
-	global lastLat, lastLon, lastAlt, distance
-	#print(line)
-	if len(line.split(',')) == 2:
+	global lastLat, lastLon, lastAlt, distance, sats, rssi
+	if len(line.split(',')) == 4:
 		data = line.split(',')
 		lat = float(data[0]) / 10000000
 		lon = float(data[1]) / 10000000
+		sats = int(data[2])
+		rssi = int(data[3])
 		if int(lat) == 38 and int(lon) == -9: 
 			lastLat = lat
 			lastLon = lon
-		#print("new read",lastLat, lastLon)
 		newRead = True
 	else:
 		print('ERROR: ',line)
@@ -93,8 +94,7 @@ def main(d):
 	gps_points = db.GPSData(conn)
 	camera_state = db.CameraState(conn)
 
-	success = 0
-	start_time = time.time()
+	time_new_read = time.time()
 		
 	rec_Thread = threading.Thread(target=Rx_thread)
 	rec_Thread.start()
@@ -102,31 +102,29 @@ def main(d):
 	try:
 		while True:
 			time.sleep(0.01)
+			if time.time() - time_new_read >= 3:
+				io.SetSecondLED(False)
+			else:
+				io.SetSecondLED(True)
 			if newRead:
+				time_new_read = time.time()
 				position = {"latitude": float(lastLat), "longitude": float(lastLon)}
 				gps_points.latest_gps_data = position
-		
-				# Time between readings calculations
-				success += 1
-				curT = time.time()
-				elapT = curT - start_time
-				
-				if elapT >= 5:
-					readsPerSec = success/elapT
-					#print('Reads per second: ',readsPerSec)
-					success = 0
-					start_time = time.time()
-					if readsPerSec >= 4:
-						io.SetSecondLED(True)
-					else:
-						io.SetSecondLED(False)
+				print(f"{lastLat}, {lastLon}, {sats}, {rssi}")
+    
+				if sats >= 3:
+					io.SetFirstLED(True)
+				else:
+					io.SetFirstLED(False)
 		
 				gps_points.new_reading = True
 				newRead = False
 				if camera_state.is_recording:
 					with open('gps_data.txt', 'a+') as f:
-						f.write('{:.6f},{:.6f},{}\n'.format(lastLat, -lastLon, 'saved'))
+						f.write('{:.6f},{:.6f},{}\n'.format(lastLat, lastLon, 'saved'))
+
 	except KeyboardInterrupt:
+		rec_Thread.join()
 		pass
 		
 

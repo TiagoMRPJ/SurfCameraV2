@@ -167,10 +167,14 @@ class ZoomFocus:
         send_command(self.ser, "M240 B5000")    # make motor move slower
         send_command(self.ser, "G0 B38000")
         
-    def setZoom(self, zoomVal):
-        camValue = zoomVal/100 * (58000 - 17850) + 17850
-        com = "G0 A" + str(camValue)
-        send_command(self.ser, com)
+    def setZoom(self, zoom):
+        try:
+            zoomVal = 100 - zoom
+            camValue = zoomVal/100 * (58000 - 17850) + 17850
+            com = "G0 A" + str(camValue)
+            send_command(self.ser, com)
+        except Exception as e:
+            print(f"Error zooming {e}")
         
     def setAutoFocus(self):
         focus_table = []

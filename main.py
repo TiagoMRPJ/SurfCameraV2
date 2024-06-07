@@ -1,11 +1,11 @@
+#! /usr/bin/python
+import time
 import Camera
 import RadioGps
 import TrackingControl
 import WebServer
 
-
 from multiprocessing import Process, Manager
-import time
 import redis
 from db import RedisClient
 
@@ -31,5 +31,7 @@ if __name__ == '__main__':
     process_list = []
     for p in PROCESSES:
         process_list.append(Process(target=p.main, args=(d,)))
+        time.sleep(0.5)
     for p in process_list:
         p.start()
+        time.sleep(0.5)

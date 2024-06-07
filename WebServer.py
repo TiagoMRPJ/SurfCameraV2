@@ -32,6 +32,22 @@ def main(d):
         print("Flask Stop Recording")
         camera_state.start_recording = False
         return jsonify({ "success": camera_state.start_recording, "message": "OK" })
+    
+    @app.route('/enable_autorec', methods=["POST"])
+    def enable_autorec():
+        """Sets the db camera state to enable auto recording"""
+        print("---")
+        print("Flask Auto Recording")
+        camera_state.enable_auto_recording = True
+        return jsonify({ "success": camera_state.enable_auto_recording, "message": "OK" })
+    
+    @app.route('/disable_autorec', methods=["POST"])
+    def disable_autorec():
+        """Sets the db camera state to disable auto recording"""
+        print("---")
+        print("Flask Stop Auto Recording")
+        camera_state.enable_auto_recording = False
+        return jsonify({ "success": camera_state.enable_auto_recording, "message": "OK" })
 
     @app.route('/start_tracking', methods=["POST"])
     def start_tracking():

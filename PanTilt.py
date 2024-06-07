@@ -12,7 +12,6 @@ class PanTiltController:
         
         IO = MyGPIO()
         IO.SetHerkulexEnable(False) # False IS ON
-        
         self.serial = serial.Serial('/dev/ttyS0', baudrate = 115200)
         broadcast_srv = hx.Servo(serial = self.serial)
         broadcast_srv.led = hx.LED_WHITE
@@ -95,5 +94,6 @@ class PanTiltController:
 if __name__ == "__main__":
     s = PanTiltController()
     s.setPanServoAngle(angle = 0)
-    s.setTiltServoAngle(angle= 0)
+    s.setTiltServoAngle(angle= 100)
+    
     

@@ -1,5 +1,5 @@
 """
-Blinks LED in blue of all connected HerkuleX servos.
+Moves the camera around the maximum positions
 """
 
 import pyherkulex as hx
@@ -7,7 +7,8 @@ import time
 
 from PanTilt import PanTiltController as pt
 
-if __name__ == "__main__":
+
+def main():
     ptcontroller = pt()
 
     print("Testing Tilt ....")
@@ -22,4 +23,9 @@ if __name__ == "__main__":
     ptcontroller.setPanServoAngle(-79,10)
     time.sleep(1.5)
     ptcontroller.setPanServoAngle(0,5)
+
+
+if __name__ == "__main__":
+    main()
+
     

@@ -197,6 +197,7 @@ class CameraState:
         self.client = RedisClient(connection)
         self.client.set_initial("start_recording", False)
         self.client.set_initial("is_recording", False)
+        self.client.set_initial("enable_auto_recording", False)
         self.client.set_initial("focus_tracker", False)
 
     @property
@@ -238,3 +239,11 @@ class CameraState:
     @image_focus.setter
     def image_focus(self, v):
         self.client.set("state_image_focus", v)
+        
+    @property
+    def enable_auto_recording(self):
+        return self.client.get("enable_auto_recording")
+
+    @enable_auto_recording.setter
+    def enable_auto_recording(self, v):
+        self.client.set("enable_auto_recording", v)

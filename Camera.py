@@ -3,6 +3,7 @@ import cv2
 import time
 import Focus
 import db
+from collections import deque
 import numpy as np
 
 class Cam():
@@ -29,6 +30,8 @@ class Cam():
 		self.camera_state = db.CameraState(conn)
 		self.commands = db.Commands(conn)
 		self.camera_state.start_recording = False
+		self.frame_buffer = deque(maxlen=300)  # FIFO buffer for the most recent 300 frames
+
 
 	def eval_focus(self, img):
 		# get ROI and calculate Laplacian transformation
@@ -82,21 +85,29 @@ class Cam():
 			ret_video = {}
 			end = time.time()
 			new_frame, img = self.capture.read()
-			if self.camera_state.start_recording and not self.is_recording:
+
+			if not self.is_recording:  		# Append recent frame to the 300 FIFO buffer while not recording to keep store of the last ~10 seconds
+				self.frame_buffer.append(img)
+
+			if self.camera_state.start_recording and not self.is_recording: # If we start recording, create video buffer and create video file
 				self.is_recording = True
 				print("Start recording with timeStamp {}".format(time.time()))
-				self.video_file = cv2.VideoWriter(str(int(time.time()))+'.avi', 0, cv2.VideoWriter_fourcc(*'MJPG'), 30, (640,480))
-				self.imgbuffer = []
-			if self.is_recording and not self.camera_state.start_recording:
+				self.video_file = cv2.VideoWriter(str(int(time.time()))+'.avi', 0, cv2.VideoWriter_fourcc(*'MJPG'), 25, (640,480))
+				self.videobuffer = []
+			if self.is_recording and not self.camera_state.start_recording:	# When we stop recording, save the first 300 frames from the FIFO buffer to the video file and then the remaining video frames
 				self.is_recording = False
-				for f in self.imgbuffer:
+
+				for f in self.frame_buffer:
 					self.video_file.write(f)
+				for f in self.videobuffer:
+					self.video_file.write(f)
+     
 				self.video_file.release()
 				print("Recording Session Finished")
 			
 			if self.is_recording and new_frame:
-				self.imgbuffer.append(img)
-    			#self.imgbuffer = np.append(self.imgbuffer,  img, axis=None)
+				self.videobuffer.append(img)
+    			#self.videobuffer = np.append(self.videobuffer,  img, axis=None)
 				#self.video_file.write(img)
 
 			elapsed = end-start
@@ -110,11 +121,11 @@ class Cam():
 				self.focus_val, _ = self.eval_focus(img)
 				self.camera_state.image_focus = self.focus_val
      
-			if not self.is_recording:
+			if not self.is_recording or self.is_recording:
 				frame = cv2.imencode('.jpg', img)[1].tobytes() 
 				self.camera_state.image = (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 		
-  		self.capture.release()
+		self.capture.release()
 		self.running = False
 
 def main(d):
@@ -126,8 +137,8 @@ def main(d):
 	print("Waiting for camera")
 	while c.fps == 0:
 		time.sleep(0.1) # should be implemented with queue/signals but good enough for testing
-
 	print("Cam is operational")
+ 
 	try:
 		while True:
 			time.sleep(0.01)
